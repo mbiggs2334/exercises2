@@ -1,0 +1,27 @@
+.Cell-on, .Cell-off {
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease;
+}
+
+.Cell-on, .Cell-on:not(:hover) {
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 20px white;
+    cursor: pointer;
+}
+
+.Cell-off {
+    border: 1px solid white;
+    background-color: black;
+}
+
+.Cell-on:hover {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+    border: yellow 1px solid;
+}
+
