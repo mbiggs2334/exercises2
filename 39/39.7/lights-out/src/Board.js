@@ -11,13 +11,13 @@ const Board = ({rows=10, cols=15,}) => {
     const changeDiff = (e) => {
         let text = e.target.innerText;
         if(text === 'Easy'){
-            setDiff(() => 7);
+            setDiff(() => 2);
         };
         if(text === 'Medium'){
             setDiff(() => 4);
         };
         if(text === 'Hard'){
-            setDiff(() => 2);
+            setDiff(() => 8);
         };
         setBoardDiff(text);
     }
@@ -76,8 +76,8 @@ const Board = ({rows=10, cols=15,}) => {
     return (
         <>
             <div className="Board-buttons">
-                <DifficultyButton diff="Easy" changeDiff={changeDiff}  />
-                <DifficultyButton diff="Medium" changeDiff={changeDiff}/>
+                <DifficultyButton diff="Easy" changeDiff={changeDiff} />
+                <DifficultyButton diff="Medium" changeDiff={changeDiff} />
                 <DifficultyButton diff="Hard" changeDiff={changeDiff} />
             </div>
             <div className="Board-diff">

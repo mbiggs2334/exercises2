@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './TodoApp/App';
+import TodoApp from './TodoApp/TodoApp';
 
 const TodoButton = (props) => {
     const loadTodo = () => {
-        ReactDOM.render(<App />, document.getElementById('root'));
+        ReactDOM.render(<TodoApp />, document.getElementById('root'));
     };
 
     return (

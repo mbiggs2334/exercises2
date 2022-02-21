@@ -1,0 +1,7 @@
+.BoxList-boxes {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    width: 50%;
+}
