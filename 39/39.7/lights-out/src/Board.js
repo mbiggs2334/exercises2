@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Cell from './Cell';
 import DifficultyButton from './DifficultyButton';
+import ResetBoardButton from './ResetBoardButton';
 import YouWin from './YouWin';
 import './Board.css';
 
@@ -10,16 +11,16 @@ const Board = ({rows=10, cols=15,}) => {
     const changeDiff = (e) => {
         let text = e.target.innerText;
         if(text === 'Easy'){
-            setDiff(() => 6, startBoard());
+            setDiff(() => 7);
         };
         if(text === 'Medium'){
-            setDiff(() => 4, startBoard());
+            setDiff(() => 4);
         };
         if(text === 'Hard'){
-            setDiff(() => 2, startBoard());
+            setDiff(() => 2);
         };
+        setBoardDiff(text);
     }
-    
 
     const lightToggle = (e) => {
         let row = parseInt(e.target.dataset.row);
@@ -50,10 +51,13 @@ const Board = ({rows=10, cols=15,}) => {
                 return setBoardValues();
             })
         )))
+        setBoardVis(true);
     };
 
     const [board, setBoard ] = useState([]);
     const [diff, setDiff] = useState(4);
+    const [boardDiff, setBoardDiff] = useState('Medium');
+    const [boardVis, setBoardVis] = useState(false);
 
     const checkBoard = () => {
         let gameOver = true;
@@ -71,9 +75,18 @@ const Board = ({rows=10, cols=15,}) => {
  
     return (
         <>
-            <DifficultyButton diff="Easy" changeDiff={changeDiff}  />
-            <DifficultyButton diff="Medium" changeDiff={changeDiff}/>
-            <DifficultyButton diff="Hard" changeDiff={changeDiff} />
+            <div className="Board-buttons">
+                <DifficultyButton diff="Easy" changeDiff={changeDiff}  />
+                <DifficultyButton diff="Medium" changeDiff={changeDiff}/>
+                <DifficultyButton diff="Hard" changeDiff={changeDiff} />
+            </div>
+            <div className="Board-diff">
+                Board Difficulty: {boardDiff}
+            </div>
+            <ResetBoardButton 
+                startBoard={startBoard}
+                message={boardVis ? 'Reset' : 'Start'} 
+            />
             <div className="Board">
                 {board.map((arr,arryIdx) => {
                     return (
