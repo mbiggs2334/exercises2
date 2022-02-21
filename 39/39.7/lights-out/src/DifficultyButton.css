@@ -1,0 +1,16 @@
+.DifficultyButton, .DifficultyButton:not(:hover) {
+    font-size: 1.2rem;
+    margin: 1rem .5rem;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: .15rem .65rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.DifficultyButton:hover {
+    color: black;
+    background-color: white;
+}

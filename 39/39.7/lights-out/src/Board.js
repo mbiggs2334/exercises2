@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Cell from './Cell';
-import StartButton from './startButton';
+import DifficultyButton from './DifficultyButton';
 import YouWin from './YouWin';
 import './Board.css';
 
 const Board = ({rows=10, cols=15,}) => {
 
+    const changeDiff = (e) => {
+        let text = e.target.innerText;
+        if(text === 'Easy'){
+            setDiff(() => 6, startBoard());
+        };
+        if(text === 'Medium'){
+            setDiff(() => 4, startBoard());
+        };
+        if(text === 'Hard'){
+            setDiff(() => 2, startBoard());
+        };
+    }
     
+
     const lightToggle = (e) => {
         let row = parseInt(e.target.dataset.row);
         let col = parseInt(e.target.dataset.col);
@@ -22,7 +35,7 @@ const Board = ({rows=10, cols=15,}) => {
     };
 
     const setBoardValues = () => {
-        let num = Math.floor(Math.random() * 2 ) + 1;
+        let num = Math.floor(Math.random() * diff ) + 1;
         if(num === 1){
             return true;
         } else {
@@ -40,6 +53,7 @@ const Board = ({rows=10, cols=15,}) => {
     };
 
     const [board, setBoard ] = useState([]);
+    const [diff, setDiff] = useState(4);
 
     const checkBoard = () => {
         let gameOver = true;
@@ -57,7 +71,9 @@ const Board = ({rows=10, cols=15,}) => {
  
     return (
         <>
-            <StartButton startBoard={startBoard} />
+            <DifficultyButton diff="Easy" changeDiff={changeDiff}  />
+            <DifficultyButton diff="Medium" changeDiff={changeDiff}/>
+            <DifficultyButton diff="Hard" changeDiff={changeDiff} />
             <div className="Board">
                 {board.map((arr,arryIdx) => {
                     return (
