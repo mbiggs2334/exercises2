@@ -11,13 +11,13 @@ const Board = ({rows=10, cols=15,}) => {
     const changeDiff = (e) => {
         let text = e.target.innerText;
         if(text === 'Easy'){
-            setDiff(() => 2);
+            setDiff(() => 8);
         };
         if(text === 'Medium'){
             setDiff(() => 4);
         };
         if(text === 'Hard'){
-            setDiff(() => 8);
+            setDiff(() => 2);
         };
         setBoardDiff(text);
     }
