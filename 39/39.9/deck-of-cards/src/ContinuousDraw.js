@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const ContinuousDraw = ({haveDeck, getCard}) => {
+const ContinuousDraw = ({haveDeck, getCard, cardsLength}) => {
 
     const intervalId = useRef();
 
@@ -16,6 +16,10 @@ const ContinuousDraw = ({haveDeck, getCard}) => {
             }, 1000);
             setDrawing(true);
         };
+    };
+
+    if(cardsLength === 52){
+        clearInterval(intervalId.current);
     };
 
     if(haveDeck){

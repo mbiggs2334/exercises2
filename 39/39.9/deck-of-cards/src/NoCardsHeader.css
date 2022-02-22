@@ -1,0 +1,10 @@
+.NoCardsHeader-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 5rem;
+    background-color: rgba(0,0,0,.20);
+    padding: 3rem;
+    border-radius: 15px;
+}

@@ -1,0 +1,31 @@
+button, button:not(:hover) {
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,.35);
+    padding: .15rem .5rem;
+    color: gold;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+button:hover {
+    box-shadow: 0 0 10px white;
+    color: white;
+}
+
+.Cards-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+    width: 35%;
+
+}
+
+.Cards-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+}
