@@ -1,0 +1,19 @@
+.Nav a, .Nav a.active, .Nav a:not(:hover) {
+    margin: 0 1rem;
+    border: 1px solid black;
+    padding: .2rem .75rem;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.Nav a.active {
+    background-color: black;
+    color: white;
+}
+
+.Nav a:hover {
+    background-color: black;
+    color: white;
+}

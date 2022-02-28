@@ -1,0 +1,10 @@
+.VendingMachine {
+    margin-top: 1rem;
+}
+
+.VendingMachine a{
+    margin: 0rem 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
