@@ -1,0 +1,21 @@
+.ColorApp {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.ColorApp a{
+    display: inline-block;
+    margin: .5rem 0;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .6);
+    transition: all .3s ease;
+}
+
+.ColorApp a:hover {
+    color: white;
+}
+
+hr {
+    width: 75vw;
+    margin-top: 1rem;
+}

@@ -1,0 +1,18 @@
+.DogNav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(68, 68, 68);
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.DogNav a {
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.8rem;
+    transition: all .3s ease;
+}
+
+.DogNav a.active, .DogNav a:hover {
+    color: white;
+}

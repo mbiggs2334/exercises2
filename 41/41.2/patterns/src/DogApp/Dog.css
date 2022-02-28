@@ -1,0 +1,9 @@
+.Dog {
+    text-align: center;
+    color: white;
+    list-style-position: inside;
+}
+
+.Dog img {
+    height: 350px;
+}

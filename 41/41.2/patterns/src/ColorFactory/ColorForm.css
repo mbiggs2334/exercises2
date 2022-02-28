@@ -1,0 +1,36 @@
+.ColorForm div {
+    margin: .5rem 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.ColorForm input:focus {
+    box-shadow: none;
+}
+
+.ColorForm input {
+    font-size: 1.5rem;
+}
+
+.ColorForm button {
+    border: white 1px solid;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: .2rem .5rem;
+    border-radius: 7px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.ColorForm button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px black;
+}
+
+input[type=color]{
+    cursor:pointer;
+    background-color: black;
+    border: none;
+}

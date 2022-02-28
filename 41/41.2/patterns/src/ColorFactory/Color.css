@@ -1,0 +1,19 @@
+.Color h1, .Color h2 {
+    text-align: center;
+    font-size: 10rem;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
+}
+
+.Color h2 {
+    font-size: 5rem;
+}
+
+.Color button {
+    color: white;
+    background-color: black;
+    font-size: 1.3rem;
+    border: 1px solid white;
+    display: block;
+    margin: auto;
+}
