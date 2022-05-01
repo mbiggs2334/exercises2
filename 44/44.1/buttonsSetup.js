@@ -17,7 +17,7 @@ const buttonWasPressed = (key) => {
     buttonsPressed[key] = true;
     let allButtonsPressed = true;
     for(let key of Object.keys(buttonsPressed)){
-        if(buttonsPressed[key] === false) allButtonsPressed = false;
+        if(!buttonsPressed[key]) allButtonsPressed = false;
     };
     if(allButtonsPressed) h2.innerText = 'Thanks for coming to my TED Talk.';
 };
