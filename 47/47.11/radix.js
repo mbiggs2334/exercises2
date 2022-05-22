@@ -36,16 +36,18 @@ function radixSort(arr) {
     let currentPlace = 0;
     let sortedArray = [...arr];
     while(currentPlace < largestDigit){
+
         for(let i = 0; i < sortedArray.length; i++){
             let currentDigit = getDigit(sortedArray[i], currentPlace);
             numCont[currentDigit].push(sortedArray[i]);
         }
-        // console.log(sortedArray);
+
         console.log(numCont);
+
         sortedArray = [];
+
         for(let h = 0; h < 10; h++){
             for(let j = 0; j < numCont[h].length - 1; j++){
-                console.log(numCont[h][j]);
                 sortedArray.push(numCont[h][j]);
             }
             numCont[h].length = 0;
